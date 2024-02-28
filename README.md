@@ -4,7 +4,7 @@ Clone this to your workspace:
 
     git clone https://github.com/davidmoten/maven-demo.git
 
-##Import to Eclipse
+##Import to Eclipse sad
 
 To import this maven structured project into Eclipse:
 

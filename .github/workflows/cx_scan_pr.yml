@@ -1,10 +1,10 @@
 name: Checkmarx One Scan
 on:
-  pull_request_target:
-    types: [opened, synchronize]
-permissions:
-  pull-requests: write
-  contents: read
+  push:
+    branches:
+      - main
+      - master
+      - dev
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,3 +19,4 @@ jobs:
           base_uri: "https://us.ast.checkmarx.net"
           cx_client_id: ${{ secrets.CX_CLIENT_ID }}
           cx_client_secret: ${{ secrets.CX_CLIENT_SECRET }}
+          additional_params: --sast-incremental
